@@ -19,6 +19,8 @@ def get_char_count(book_contents:str):
 def organize_characters(chars:dict):
     dictionary_list = []
     for char in chars:
+        if not char.isalpha(): continue
+        
         new_dict = {
             "char": char,
             "count": chars[char]
