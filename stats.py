@@ -1,3 +1,17 @@
-def get_words_from_book(book_contents:str):
+def get_word_count(book_contents:str):
     words = book_contents.split()
     return len(words)
+
+def get_char_count(book_contents:str):
+    words = book_contents.split()
+    char_counts = {}
+
+    for word in words:
+        for chars in word:
+            char = chars.lower()
+            if char not in char_counts:
+                char_counts[char] = 1
+            else:
+                char_counts[char] += 1
+
+    return char_counts
