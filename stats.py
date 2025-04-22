@@ -15,3 +15,16 @@ def get_char_count(book_contents:str):
                 char_counts[char] += 1
 
     return char_counts
+
+def organize_characters(chars:dict):
+    dictionary_list = []
+    for char in chars:
+        new_dict = {
+            "char": char,
+            "count": chars[char]
+            }
+        
+        dictionary_list.append(new_dict)
+
+    return dictionary_list
+        

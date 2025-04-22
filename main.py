@@ -9,6 +9,7 @@ def main():
     book = get_book_text('books/frankenstein.txt')
 
     print(f'{stats.get_word_count(book)} words found in the document')
-    print(stats.get_char_count(book))
-
+    #print(stats.get_char_count(book))
+    stats.organize_characters(stats.get_char_count(book))
+    
 main()
