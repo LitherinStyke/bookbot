@@ -13,7 +13,7 @@ def main():
     print('============ BOOKBOT ============')
     print(f'Analyzing book found at {book_path}...')
     print('----------- Word Count ----------')
-    print(f'Fount {stats.get_word_count(book)} total words')
+    print(f'Found {stats.get_word_count(book)} total words')
     print('--------- Character Count -------')
     for char_dict in char_list:
         print(f'{char_dict['char']}: {char_dict['count']}')
