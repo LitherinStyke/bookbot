@@ -26,5 +26,9 @@ def organize_characters(chars:dict):
         
         dictionary_list.append(new_dict)
 
+    def sort_on(dict):
+        return dict['count']
+    
+    dictionary_list.sort(reverse=True, key=sort_on)
     return dictionary_list
         
