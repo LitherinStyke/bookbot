@@ -1,3 +1,4 @@
+import sys
 import stats
 
 def get_book_text(path_to_file:str):
@@ -6,8 +7,19 @@ def get_book_text(path_to_file:str):
         return file_contents
 
 def main():
-    book_path = 'books/frankenstein.txt'
-    book = get_book_text(book_path)
+    if len(sys.argv) < 2 or len(sys.argv) > 2:
+        print('Usage: python3 main.py <path_to_book>')
+        sys.exit(1)
+
+    book_path = sys.argv[1]
+    book = None
+    
+    try:
+        book = get_book_text(book_path)
+    except Exception as e:
+        print('Not a path or not a book')
+        sys.exit(2)
+
     char_list = stats.organize_characters(stats.get_char_count(book))
 
     print('============ BOOKBOT ============')
